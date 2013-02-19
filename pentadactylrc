@@ -1,0 +1,33 @@
+"1.0
+
+"source! ~/.pentadactylrc
+
+loadplugins '\.(js|penta)$'
+group user
+
+" use , as <leader>
+nmap , <leader>
+
+nmap h gT
+nmap l gt
+nmap T :tabopen! 
+
+nmap <leader>gd :tabopen login.secureserver.net<cr>
+nmap <leader>ma :tabopen mail.com<cr>
+
+map -count -modes=c <C-i> <Tab>
+map -count -modes=c <C-p> <S-Tab>
+
+colorscheme simple_dark
+
+set titlestring="Firefox <3 Vim"
+set complete=location
+set defsearch=startpage-https
+set editor=gvim
+set hintkeys=arstdhneio
+set showtabline=multitab
+
+" autoload config
+map <leader>s :so "~/.pentadactylrc"<cr>
+
+" vim: set ft=pentadactyl:
