@@ -1,0 +1,59 @@
+! ------------------------------------------------------
+! file:     /home/ramonovski/.Xdefaults
+! author:   ramonovski
+! modified: Apr 2013
+! vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ------------------------------------------------------
+        
+! ------------
+! Xft settings 
+! ------------
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hinstyle:   hintslight
+
+# ----
+# Font
+ ----
+URxvt*font:     -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
+URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
+
+! -------
+! Colours
+! -------
+#include "/home/ramon/.xcolours/chido"
+
+! -----------------
+! Fake transparency
+! -----------------
+URxvt.transparent: true
+URxvt.shading: 40
+
+! ---------
+! Open URLs
+! ---------
+URxvt.underlineURLs: true
+URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+!URxvt.reverseVideo: true
+URxvt.perl-lib: /home/ramon/.urxvt/
+URxvt.perl-ext: selection
+URxvt.perl-ext: mark-yank-urls
+URxvt.colorUL:       #86a2be
+URxvt*urlLauncher:   /usr/bin/iceweasel
+
+! ------------
+! Misc options 
+! ------------
+!URxvt.termName:          screen-256color
+!URxvt.termName:          xterm-256color
+URxvt.termName:          rxvt-unicode-256color
+URxvt*urgentOnBell:      true
+URxvt*visualBell:        true
+URxvt*skipBuiltinGlyphs: true
+URxvt*borderless:        true 
+URxvt*scrollBar:         false
+URxvt*saveLines:         666
+URxvt.buffered:          true
+URxvt.iconFile:          /usr/share/pixmaps/urxvt.xmp
