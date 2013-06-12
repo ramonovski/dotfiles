@@ -1,0 +1,109 @@
+# ------------------------------------------------------
+# file:     $HOME/.zsh/aliases
+# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
+# modified: Dec 2012
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
+# ------------------------------------------------------
+
+# --------
+# Aptitude
+# --------
+alias dinstall='sudo aptitude install'
+alias dremove='sudo aptitude remove'
+alias dupdate='sudo aptitude update'
+alias dsearch='sudo aptitude search'
+
+# -----------
+# Mount stuff 
+# -----------
+alias windos='sudo ntfs-3g /dev/sda2 /mnt/windos'
+alias ehd="sudo mount /mnt/ehd && cd /mnt/ehd"
+alias cdrive='sudo mount /dev/sr0 /mnt/cdrom/'
+alias sansa='mount /mnt/sansa/'
+alias flashd='mount /mnt/flashd'
+alias um1='sudo umount /mnt/sansa'
+alias um2='sudo umount /mnt/ehd'
+alias um3='sudo umount /mnt/windos'
+alias um4='sudo umount /mnt/camera'
+alias um5='sudo umount /mnt/flashd'
+
+# -----
+# Music
+# -----
+alias ncm='ncmpcpp'
+alias mix='alsamixer'
+alias eq='alsamixer -D equal'
+alias sjack='qjackctl -start'
+
+# --------------------
+# Auto extension stuff
+# --------------------
+alias -s {html,shtml,php,com,net,org,gov}=$BROWSER
+alias -s {txt,py,rb,log}=$EDITOR
+alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='sxiv'
+alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv}='mplayer'
+alias -s {mp3,ogg,wav,flac}='mplayer2'
+alias -s {odt,doc,docx,ppt,pptx,xls,xlsx,rtf}='libreoffice'
+alias -s {rar,zip,7z,tar,gz,bz2,tgz}='ext'
+alias -s torrent='rtorrent'
+alias -s pdf='zathura'
+
+# ----------------------------
+# ls, cp and that classic shit
+# ----------------------------
+alias ls='ls++'
+alias lsa='ls -a --group-directories-first'
+alias lsl='ls -lhF --group-directories-first'
+alias cp='cp -vi'
+alias cpd='cp -r'
+alias mv='mv -v'
+alias rm='nocorrect rm -Iv'
+alias rmd='nocorrect rm -r'
+alias cpr='rsync -aP'
+alias ~='cd $HOME && clear'
+alias ..='..'
+alias ..2='../..'
+alias ..3='../../..'
+alias ..4='../../../..'
+alias ..5='../../../../..'
+
+# ----
+# Apps
+# ----
+alias mplayer='mplayer -msgcolor -msgmodule'
+alias sv='sudo vim'
+
+# ----
+# Misc
+# ----
+alias go='startx'
+alias ka='killall'
+alias :q='exit'
+alias apaga='xset dpms force off'
+alias 60='sudo shutdown -h +60'
+alias 120='sudo shutdown -h +120'
+alias reboot='/bin/sync && sudo /sbin/reboot'
+alias shutdown='/bin/sync && sudo /sbin/poweroff'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+alias futurama='curl -Is slashdot.org | egrep "^X-(F|B)" | cut -d \- -f 2'                        
+alias updatefonts='sudo fc-cache -vf'
+alias TV="xrandr --output HDMI1 --mode "1920x1080" --right-of LVDS1"
+alias NOTV="xrandr --output HDMI1 --off"
+alias cpuwatch='watch grep \"cpu MHz\" /proc/cpuinfo'
+
+# --------------
+# Global aliases 
+# --------------
+alias -g L='| vimpager' 
+alias -g G='| grep -in --color=auto'
+alias -g R='&> /dev/null &'
+alias -g T='| tail -23'
+alias -g W='| wc -l'
+alias -g He='| head'
+alias -g H='| --help '
+
+# ---
+# Net
+# ---
+alias ipe='curl icanhazip.com'
+alias p='ping gentoo.org'
