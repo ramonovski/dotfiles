@@ -1,19 +1,17 @@
 # ------------------------------------------------------
 # file:     $HOME/.xinitrc
-# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
-# modified: Dec 2012
+# author:   ramonovski 
+# modified: Apr 2013
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
 # Keyboard layout
-#setxkbmap -layout us -variant altgr-intl
 setxkbmap us -variant colemak
 
 # Hide mouse after some idle time
-#unclutter -idle 5 -noevents &
+/usr/bin/unclutter -idle 5 -noevents &
 
 # Load fonts
-#xset +fp /usr/share/fonts/artwiz-latin1
 #xset +fp ~/.fonts
 
 # MPD
@@ -26,7 +24,7 @@ sh $HOME/.scripts/startmpd.sh &
 sh $HOME/.fehbg &
 
 # Xmodmap
-xmodmap $HOME/.xmodmaprc
+/usr/bin/xmodmap $HOME/.xmodmaprc
 
 # wm
-exec i3 
+exec /usr/bin/i3 -V -d all > $HOME/.i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
