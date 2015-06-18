@@ -1,0 +1,23 @@
+!Cursor
+URxvt*cursorColor: #454638
+URxvt*cursorBlink: true
+
+!Colors
+*foreground: #737373
+*background: #080808
+*color0:  rgb:00/00/00
+*color1:  rgb:ba/7f/7f
+*color2:  rgb:8e/ae/71
+*color3:  rgb:d2/b4/8c
+*color4:  rgb:5f/7b/8a
+*color5:  rgb:cd/cd/b4
+*color6:  rgb:68/68/68
+*color7:  rgb:ff/ff/ff
+*color8:  rgb:00/00/00
+*color9:  rgb:79/39/39
+*color10: rgb:4f/5c/3a
+*color11: rgb:cd/cd/c1
+*color12: rgb:6b/7b/8a
+*color13: rgb:cd/cd/b4
+*color14: rgb:77/87/98
+*color15: rgb:ca/ca/ca

@@ -81,7 +81,6 @@ hi WarningMsg -a color: red !important; background: inherit !important;
 
 "For other descriptions of each item, please see :h 'highlight'
 
-"
 "style -name statusbar chrome://* <<EOM
 "#status-bar statusbarpanel { padding: 0 1px !important; }
 "statusbarpanel > * { margin: 0 !important; padding: 0 2px 0 0 !important; }
