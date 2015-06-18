@@ -1,0 +1,55 @@
+URxvt.background: #0f0f11
+URxvt.foreground: #c4c4c4
+
+!black
+ *color0:  #333333
+ *color8:  #3D3D3D
+!red
+ *color1:  #925e5a
+ *color9:  #944b45
+!green
+ *color2:  #93b879
+ *color10: #84a26f
+!yellow
+ *color3:  #b8a779
+ *color11: #a2946d
+!blue
+ *color4:  #79aeb8
+ *color12: #65929a
+!magenta
+ *color5:  #b87979
+ *color13: #a67171
+!cyan
+ *color6:  #8b8da2
+ *color14: #6f7185
+!white
+ *color7:  #c8c5b8
+ *color15: #a7a59b
+
+URxvt.background: #0f0f11
+URxvt.foreground: #c4c4c4
+
+!black
+ *color0:  #333333
+ *color8:  #3D3D3D
+!red
+ *color1:  #925e5a
+ *color9:  #944b45
+!green
+ *color2:  #93b879
+ *color10: #84a26f
+!yellow
+ *color3:  #b8a779
+ *color11: #a2946d
+!blue
+ *color4:  #79aeb8
+ *color12: #65929a
+!magenta
+ *color5:  #b87979
+ *color13: #a67171
+!cyan
+ *color6:  #8b8da2
+ *color14: #6f7185
+!white
+ *color7:  #c8c5b8
+ *color15: #a7a59b

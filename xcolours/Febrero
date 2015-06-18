@@ -3,7 +3,6 @@ URxvt*cursorColor: #454638
 URxvt*cursorBlink: true
 
 !Colors
-!
 *foreground: #737373
 *background: #080808
 *color0:  rgb:00/00/00
