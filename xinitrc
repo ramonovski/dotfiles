@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.xinitrc
-# author:   ramonovski 
-# modified: Apr 2013
+# author:   ramonovski
+# modified: Jul 2014
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
@@ -9,9 +9,10 @@
 setxkbmap us -variant colemak
 
 # Hide mouse after some idle time
-/usr/bin/unclutter -idle 5 -noevents &
+unclutter -idle 5 -noevents &
 
 # Load fonts
+#xset +fp /usr/share/fonts/artwiz-latin1
 #xset +fp ~/.fonts
 
 # MPD
@@ -27,4 +28,4 @@ sh $HOME/.fehbg &
 /usr/bin/xmodmap $HOME/.xmodmaprc
 
 # wm
-exec /usr/bin/i3 -V -d all > $HOME/.i3/i3log-$(date +'%F-%k-%M-%S') 2>&1
+exec /usr/bin/i3 
