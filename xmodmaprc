@@ -1,0 +1,11 @@
+clear mod1
+clear control
+clear lock
+keycode 37 = Alt_L
+keycode 64 = Control_L
+keycode 66 = Super_L
+add mod1 = Alt_L
+add control = Control_L
+add mod4 = Super_L
+
+

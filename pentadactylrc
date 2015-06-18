@@ -22,10 +22,10 @@ colorscheme simple_dark
 
 set titlestring="Firefox <3 Vim"
 set complete=location
-set defsearch=startpage-https
+set defsearch=startpage
 set editor=gvim
 set hintkeys=arstdhneio
-set showtabline=multitab
+"set showtabline=multitab
 
 " autoload config
 map <leader>s :so "~/.pentadactylrc"<cr>

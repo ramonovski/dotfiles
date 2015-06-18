@@ -16,7 +16,7 @@ Xft.hinstyle:   hintslight
 
 # ----
 # Font
- ----
+# ----
 URxvt*font:     -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
 URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
 
@@ -29,19 +29,20 @@ URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
 ! Fake transparency
 ! -----------------
 URxvt.transparent: true
-URxvt.shading: 40
+URxvt.shading: 15
 
 ! ---------
 ! Open URLs
 ! ---------
 URxvt.underlineURLs: true
 URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+URxvt.keysym.M-y: perl:mark-yank-urls:activate_mark_url_mode
 !URxvt.reverseVideo: true
 URxvt.perl-lib: /home/ramon/.urxvt/
 URxvt.perl-ext: selection
 URxvt.perl-ext: mark-yank-urls
 URxvt.colorUL:       #86a2be
-URxvt*urlLauncher:   /usr/bin/iceweasel
+URxvt*urlLauncher:   /usr/bin/firefox
 
 ! ------------
 ! Misc options 
@@ -49,6 +50,7 @@ URxvt*urlLauncher:   /usr/bin/iceweasel
 !URxvt.termName:          screen-256color
 !URxvt.termName:          xterm-256color
 URxvt.termName:          rxvt-unicode-256color
+!URxvt*termName: rxvt
 URxvt*urgentOnBell:      true
 URxvt*visualBell:        true
 URxvt*skipBuiltinGlyphs: true

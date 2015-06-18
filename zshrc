@@ -94,7 +94,7 @@ export EDITOR='/usr/bin/vim'                \
        SIMPLE_BACKUP_SUFFIX="_`date +%F`"   \
        XAUTHORITY="${HOME}/.config/xorg/.Xauthority" \
        RXVT_SOCKET="$HOME/.urxvt/tmp" \
-       WM='scrotwm' \
+       WM='i3' \
        MPLAYER_HOME="$HOME/.config/mplayer" \
        GIMP2_DIRECTORY="$HOME/.config/gimp-2.6" \
 
