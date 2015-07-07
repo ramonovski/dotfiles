@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.zsh/zshrc
-# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
-# modified: August 2011
+# author:   Ramon Solis www.ramonsolis.net
+# modified: Jul 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
@@ -80,23 +80,23 @@ setopt auto_pushd                # cd = pushd
 # --------
 # ENV VARS
 # --------
-export EDITOR='/usr/bin/vim'                \
-       VISUAL='/usr/bin/vim'                \
-       BROWSER='iceweasel'        \
-       SHELL='/bin/zsh'                     \
-       LANG='en_US.UTF-8'                    \
-       LC_COLLATE='en_US.UTF-8'              \
-       LC_CTYPE='en_US.UTF-8'                \
-       LESSCHARSET='UTF-8'                  \
-       OPERAPLUGINWRAPPER_PRIORITY=0        \
-       OPERA_KEEP_BLOCKED_PLUGIN=1          \
-       GDK_NATIVE_WINDOWS=1                 \
-       SIMPLE_BACKUP_SUFFIX="_`date +%F`"   \
-       XAUTHORITY="${HOME}/.config/xorg/.Xauthority" \
-       RXVT_SOCKET="$HOME/.urxvt/tmp" \
-       WM='i3' \
-       MPLAYER_HOME="$HOME/.config/mplayer" \
-       GIMP2_DIRECTORY="$HOME/.config/gimp-2.6" \
+export EDITOR='/usr/bin/vim'                            \
+       VISUAL='/usr/bin/vim'                            \
+       BROWSER='iceweasel'                              \
+       SHELL='/bin/zsh'                                 \
+       LANG='en_US.UTF-8'                               \
+       LC_COLLATE='en_US.UTF-8'                         \
+       LC_CTYPE='en_US.UTF-8'                           \
+       LESSCHARSET='UTF-8'                              \
+       OPERAPLUGINWRAPPER_PRIORITY=0                    \
+       OPERA_KEEP_BLOCKED_PLUGIN=1                      \
+       GDK_NATIVE_WINDOWS=1                             \
+       SIMPLE_BACKUP_SUFFIX="_`date +%F`"               \
+       XAUTHORITY="${HOME}/.config/xorg/.Xauthority"    \
+       RXVT_SOCKET="$HOME/.urxvt/tmp"                   \
+       WM='i3'                                          \
+       MPLAYER_HOME="$HOME/.config/mplayer"             \
+       GIMP2_DIRECTORY="$HOME/.gimp-2.8"                \
 
 # ------------
 # Key bindings

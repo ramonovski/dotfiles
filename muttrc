@@ -1,7 +1,9 @@
-#
-## ~/.mutt/muttrc -- Mutt configuration
-##
-#
+# ------------------------------------------------------
+# file:     $HOME/.muttrc
+# author:   Ramon Solis www.ramonsolis.net
+# modified: Jul 2015
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
+# ------------------------------------------------------
 
 #set from = "jsolis@verican.com"
 #set realname = "test"
@@ -50,5 +52,3 @@ color markers     brightred      default
 color message     white          black
 color search      brightwhite    magenta
 color bold        brightyellow   default
-# if you don't like the black progress bar at the bottom of the screen,
-# # comment out the following line

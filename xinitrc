@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.xinitrc
-# author:   ramonovski
-# modified: Jul 2014
+# author:   Ramon Solis www.ramonsolis.net
+# modified: Jul 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
@@ -9,20 +9,20 @@
 setxkbmap us -variant colemak
 
 # Hide mouse after some idle time
-unclutter -idle 5 -noevents &
+#unclutter -idle 5 -noevents &
 
 # Load fonts
 #xset +fp /usr/share/fonts/artwiz-latin1
 #xset +fp ~/.fonts
 
 # MPD
-sh $HOME/.scripts/startmpd.sh &
+#sh $HOME/.scripts/startmpd.sh &
 
 # urxvt daemon
 /usr/bin/urxvtd -q -o -f &
 
 # Wallpaper
-sh $HOME/.fehbg &
+#sh $HOME/.fehbg &
 
 # Xmodmap
 /usr/bin/xmodmap $HOME/.xmodmaprc

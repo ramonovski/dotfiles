@@ -1,3 +1,11 @@
+! ------------------------------------------------------
+! file:     $HOME/.xmodmaprc
+! author:   Ramon Solis www.ramonsolis.net
+! modified: Jul 2015
+! vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
+! ------------------------------------------------------
+
+! Swap Ctrl - Alt and set Super key in Caps Lock key's position
 clear mod1
 clear control
 clear lock
@@ -7,5 +15,3 @@ keycode 66 = Super_L
 add mod1 = Alt_L
 add control = Control_L
 add mod4 = Super_L
-
-
