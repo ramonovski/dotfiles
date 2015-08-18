@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.ncmpcpp/config
 # author:   Ramon Solis www.ramonsolis.net
-# modified: Jul 2015
+# modified: Aug 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=txt:
 # ------------------------------------------------------
 
@@ -10,7 +10,7 @@
 # ---
 mpd_host = "127.0.0.1"
 mpd_port = "6600"
-mpd_music_dir = "/home/ramonovski/Musica/"
+mpd_music_dir = "/home/ramon/Music/"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "5"
 
