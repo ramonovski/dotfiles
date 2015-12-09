@@ -1,0 +1,207 @@
+##############
+# PostgreSQL #
+##############
+
+Export query to CSV:
+(outside psql)
+echo "COPY (SELECT * from foo) TO STDOUT with CSV HEADER" | psql -o '/home/verican/test.csv' database_name 
+
+(in psql)
+\copy (select * from foo) To '/tmp/test.csv' with CSV
+
+Move order to "denied" (DE)
+update cod_sale set status = 'DE' where sale_id = 101301279;
+
+Modify headings (cod_localcategory)
+update cod_localcategory set name = 'asdf' where seqid = 666';
+
+Insert new heading
+insert into cod_localcategory (seqid, catalog_id, category_id, name, parent_id, be_parent, sorder, adonlineimmediately) values (101100531, 10110, '521', 'Children / Baby Items', 101100500, 'f', 900085, 't');
+
+Get list of Registered customers from a Catalog
+select * from sys_person where register_from = 666 (catalog id)
+
+Newsletter subscribers list
+\copy (select subscribe_email from nl_subscriber where sys_catalog_id = '10030' and stutas = 'AP') to '/tmp/test.csv' with csv
+
+dump DB
+sudo -u postgres pg_dump verican6 | gzip -9 > ./verican6_dump_20141204.gz 
+
+
+#########
+# MySQL #
+#########
+
+Export query to file:
+mysql -e "select * from myTable" -u myuser -pxxxxxxxx mydatabase > mydumpfile.txt1
+
+SELECT order_id,product_name,qty FROM orders
+INTO OUTFILE '/tmp/orders.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+import csv into table
+1. mysql -u root -p --local-infile database 
+2. load data local infile 'ca_1.csv' into table Consumers2013 fields terminated by ',' enclosed by '"' lines terminated by '\n';
+# optional
+# set id=null 
+
+
+Sometimes you have to specify the columns like this:
+load data local infile 'ca_1.csv' into table Consumers2013 fields terminated by ',' lines terminated by '\n' (firstname, secondname, etc);
+
+
+Insert ^ but skip 1st line:
+load data infile '/foo/yes.csv' into table test ignore 1 lines:
+
+reset auto increment values
+alter table table auto_increment = 1;
+
+
+Look for phonenumbers in DNC
+select leads.phonenumber from leads left join dnc on leads.phonenumber = dnc.phonenumber where dnc.phonenumber is null;
+or
+select phonenumber from leads where phonenumber not in (select phonenumber from dnc);
+
+
+backup DB:
+mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
+
+restore DB:
+mysql -u root -p[root_password] [database_name] < dumpfilename.sql
+
+
+make a copy of TABLE1
+create table TABLE2 like TABLE1;
+insert TABLE2 select * from TABLE1;
+ 
+
+
+###########
+# Postfix #
+###########
+
+Print queue to file
+mailq > ~/queue.txt
+
+Reload postfix configuration
+postfix reload
+
+Flush the queue
+postsuper -d ALL
+
+Block sender email:
+------------------
+open /etc/postfix/access_sender 
+add: email@domain.com REJECT
+
+open /etc/postfix/main.cf
+add: smtpd_sender_restrictions = check_sender_access hash:/etc/postfix/access_sender,permit_sasl_authenticated,permit
+
+# postmap hash:/etc/postfix/access_sender
+# postfix reload
+
+
+Block recipient email and/or domain:
+------------------------------------
+open: /etc/postfix/recipient_filter
+add: email@domain.com REJECT
+	 domain.net REJECT
+
+open /etc/postfix/main.cf
+add: smtpd_recipient_restrictions = check_recipient_access hash:/etc/postfix/recipient_filter,permit_mynetworks,permit_sasl_authenticated,reject_unauth_destination
+
+# postmap hash:/etc/postfix/recipient_filter
+# postfix reload
+
+
+
+
+#######
+# vim #
+#######
+
+shrink lines -> tab-delimited
+s/\n/\t/g
+
+find coma and move rest of the line to newline
+s/,/\r&/g
+
+delete lines containing "foobar"
+:g/foobar/d
+
+remove , to end of line
+:%s/,.*//
+
+save from line 100 to 200 in external file
+:100,200w filename
+
+remove blank lines
+:g/^$/d
+
+IP address
+\(\d\+\.\)\{3\}\d\{1,3\}
+
+remove DOS ^M
+%s/\r//g 
+%s/^v^m//g
+
+
+
+
+########
+# Misc #
+########
+
+cut video
+avconv -i input.avi -ss 00:27:00 -t 00:58:00 -codec copy output.avi
+ss = start point
+t = end point
+
+Cut file from line 1 to line 2
+sed -n '1,50p' yourfile > newfile
+
+Show common lines between 2 files
+comm -12 file1 file2
+
+libreoffice calc
+check if A.value exists in B.
+=COUNTIF(A$1:A$11,B1)
+
+null email spool
+cat /dev/null > /var/spool/mail/username
+
+convert to webm
+ffmpeg -i yes.mov -acodec libvorbis -ac 2 -ab 96k -ar 44100 -b 345k -s 640x360 output.webm
+
+Grep IP addresses
+grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' file
+
+grep -E -o '(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)' file
+
+(perl)
+perl -lne 'while (/(\d+\.){3}\d+/g){print $&}' file
+
+
+Display n files on terminal
+pr -m -t file1 file2 file3
+
+
+find & replace text in files
+find ./ -type f -exec sed -i -e 's/asdf/yes/g' {} \;
+
+
+find files bigger than _
+find . -type f -size +10M -exec ls {} \;
+
+
+download all zip files from x website
+wget -r -np -l 1 -A zip http://example.com/download/
+
+
+clear the content of a file (only works in bash)
+> file
+
+rsync over SSH
+rsync -avz ./LocalDir me@ip:/home/user/

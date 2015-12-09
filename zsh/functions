@@ -1,9 +1,9 @@
-# ------------------------------------------------------
+# ---------------------------------------------
 # file:     $HOME/.zsh/functions
-# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
-# modified: Dec 2012
+# author:   Ramon Solis - http://ramonsolis.net
+# modified: Feb 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
-# ------------------------------------------------------
+# ---------------------------------------------
 
 # -------------
 # Copy and Move
@@ -21,9 +21,12 @@ mvf() {
 # ---------------
 # Make thumbnails
 # ---------------
-thumb() {
-    convert -resize 250x250 "*.${1}" "*-thumb.${1}"
-}
+thumb() { convert -resize 250x250 "${1}" "thumb_${1}" }
+
+# ---------------
+# Make dir and CD
+# ---------------
+mkdircd() { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # -----
 # Chown
@@ -148,6 +151,7 @@ conf () {
             vim)        $EDITOR $HOME/.vimrc ;;
             zsh)        $EDITOR $HOME/.zshrc ;;
             i3)         $EDITOR $HOME/.i3/config ;;
+            one)        $EDITOR $HOME/.one_liners ;;
             urt)        $EDITOR $HOME/.q3a/q3ut4/urt.cfg ;;
             func)       $EDITOR $ZDOTDIR/functions ;;
             alias)      $EDITOR $ZDOTDIR/aliases;;
