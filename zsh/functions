@@ -1,7 +1,7 @@
 # ---------------------------------------------
 # file:     $HOME/.zsh/functions
 # author:   Ramon Solis - http://ramonsolis.net
-# modified: Feb 2015
+# modified: Dec 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ---------------------------------------------
 
@@ -152,6 +152,7 @@ conf () {
             zsh)        $EDITOR $HOME/.zshrc ;;
             i3)         $EDITOR $HOME/.i3/config ;;
             one)        $EDITOR $HOME/.one_liners ;;
+            pazz)       $EDITOR $HOME/.pazz ;;
             urt)        $EDITOR $HOME/.q3a/q3ut4/urt.cfg ;;
             func)       $EDITOR $ZDOTDIR/functions ;;
             alias)      $EDITOR $ZDOTDIR/aliases;;

@@ -8,7 +8,7 @@ i3status | while :
 		[[ -z "${BATT}" ]] && BATT="AC"
 		
 		read line
-		lol="$(echo -n "$TEMP °C")"
+		lol="$(echo -n $TEMP | awk '$TEMP=$TEMP" °C"')"
 		# | $(funcBatt)")"
 		echo "$lol | $line" || exit 1
 	done

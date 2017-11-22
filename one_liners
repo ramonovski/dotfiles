@@ -26,6 +26,7 @@ Newsletter subscribers list
 
 dump DB
 sudo -u postgres pg_dump verican6 | gzip -9 > ./verican6_dump_20141204.gz 
+sudo -u postgres pg_dump --encoding utf8 verican6 | gzip -9 > /home/verican/verican6_dump_20161026.tar.gz &
 
 
 #########
@@ -75,7 +76,13 @@ mysql -u root -p[root_password] [database_name] < dumpfilename.sql
 make a copy of TABLE1
 create table TABLE2 like TABLE1;
 insert TABLE2 select * from TABLE1;
+
+duplicates
+select field1, count(*) from table1 group by field1 having count(*) > 1;
  
+select unique values
+select * from table group by field1;
+select count(distinct field2) from table;
 
 
 ###########
@@ -148,6 +155,11 @@ remove DOS ^M
 %s/^v^m//g
 
 
+Sort, removing duplicate lines
+:%sort u
+
+Lowercase everything
+ggguG
 
 
 ########
@@ -205,3 +217,35 @@ clear the content of a file (only works in bash)
 
 rsync over SSH
 rsync -avz ./LocalDir me@ip:/home/user/
+
+
+archive in tar gz
+sudo tar -zcvf this.tar.gz ./dir1/
+
+
+download whole website
+wget --limit-rate=200k --no-clobber --convert-links --random-wait -r -p -E -e robots=off -U mozilla http://www.website.com
+
+protect/unprotect file
+chattr +i file
+chattr -i file
+
+
+check MD5sum
+md5sum -c <<<"ef7ab26f9a3b2cbd35aa3e7e69aad86c *path/to/file/test_binary"
+
+tar with excludes
+tar --exclude='verican/FMS' --exclude='verican/backup' -zcvf ~/verican6.tar.gz verican 
+
+format flash drive
+mkfs.vfat /dev/sdc
+
+
+replaces html text with jquery
+<script>
+jQuery("h3:contains('CREATE AN AD')").css( "color", "#579d1c" ).html("ADNET - CREATE AN ORDER");
+</script>
+
+
+list packages installed in Debian
+aptitude search '~i!~M'

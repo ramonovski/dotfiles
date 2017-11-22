@@ -46,8 +46,8 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # -----
 # Paths
 # -----
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.scripts:$PATH"
-export CDPATH="$HOME/:/usr/share:$HOME/Apps:$HOME/Musica/:$HOME/Texto/ITT/8vo/"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.scripts:$HOME/.composer/vendor/bin:$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools:$PATH"
+export CDPATH="$HOME/:/usr/share:$HOME/Apps:$HOME/Musica"
 
 # ------
 # Colors
@@ -92,11 +92,15 @@ export EDITOR='/usr/bin/vim'                            \
        OPERA_KEEP_BLOCKED_PLUGIN=1                      \
        GDK_NATIVE_WINDOWS=1                             \
        SIMPLE_BACKUP_SUFFIX="_`date +%F`"               \
-       XAUTHORITY="${HOME}/.config/xorg/.Xauthority"    \
        RXVT_SOCKET="$HOME/.urxvt/tmp"                   \
        WM='i3'                                          \
        MPLAYER_HOME="$HOME/.config/mplayer"             \
        GIMP2_DIRECTORY="$HOME/.gimp-2.8"                \
+       JAVA_HOME="/usr/local/java/jdk1.8.0_60" 		    \
+       JRE_HOME="$JAVA_HOME/jre"                        \
+       #XAUTHORITY="${HOME}/.config/xorg/.Xauthority"    \
+
+
 
 # ------------
 # Key bindings
@@ -115,17 +119,18 @@ bindkey "\e[7~" beginning-of-line
 # Vi mode
 # -------
 bindkey -v
-bindkey -M viins '^R' history-incremental-search-backward
-bindkey -M viins '^z' undo
-bindkey -M viins '^i' expand-or-complete-prefix 
-bindkey -M viins '^b' backward-word
 bindkey -M viins ' '  magic-space                
-bindkey -M viins '^w' backward-delete-word
-bindkey -M viins '^f' forward-word
-bindkey -M viins '^P' up-history
 bindkey -M viins '^a' beginning-of-line
+bindkey -M viins '^b' backward-word
 bindkey -M viins '^e' end-of-line
+bindkey -M viins '^f' forward-word
+bindkey -M viins '^i' expand-or-complete-prefix 
+bindkey -M viins '^n' down-line-or-history
+bindkey -M viins '^p' up-history
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M viins '^w' backward-delete-word
 bindkey -M viins '^y' yank
+bindkey -M viins '^z' undo
 
 # -----------------------
 # Colors in TTY (Zenburn)
@@ -149,3 +154,9 @@ if [[ ${TERM} == "linux" && ${+DISPLAY} == 0 ]]; then
     echo -en "\e]PFffffff" # zen-bright-white (norm. white)
 fi
 
+
+PATH="/home/ramon/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/ramon/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/ramon/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/ramon/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/ramon/perl5"; export PERL_MM_OPT;

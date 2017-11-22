@@ -16,7 +16,7 @@ alias dsearch='sudo aptitude search'
 # -----------
 # Mount stuff 
 # -----------
-alias windos='sudo ntfs-3g /dev/sda2 /mnt/windos'
+alias windos='sudo ntfs-3g /dev/sda4 /mnt/windos'
 alias ehd="sudo mount /mnt/ehd && cd /mnt/ehd"
 alias cdrive='sudo mount /dev/sr0 /mnt/cdrom/'
 alias sansa='mount /mnt/sansa/'
@@ -41,8 +41,7 @@ alias sjack='qjackctl -start'
 alias -s {html,shtml,php,com,net,org,gov}=$BROWSER
 alias -s {txt,py,rb,log}=$EDITOR
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='sxiv'
-alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv}='mplayer'
-alias -s {mp3,ogg,wav,flac}='mplayer2'
+alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv,webm}='mplayer'
 alias -s {odt,doc,docx,ppt,pptx,xls,xlsx,rtf}='libreoffice'
 alias -s {rar,zip,7z,tar,gz,bz2,tgz}='ext'
 alias -s torrent='rtorrent'
@@ -107,3 +106,6 @@ alias -g H='| --help '
 # ---
 alias ipe='curl icanhazip.com'
 alias p='ping gentoo.org'
+
+alias cis='sudo mount -t cifs -o username=valleychronicle,password=1234 //192.168.15.1/theserver /mnt/cisco'
+alias cloud='sudo mount -t cifs -o username=jose,password=0112358 //192.168.10.129/jose /mnt/cisco'

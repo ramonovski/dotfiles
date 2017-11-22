@@ -113,6 +113,14 @@ bindsym $mod+Shift+ampersand 	move container to workspace $w7
 bindsym $mod+Shift+asterisk 	move container to workspace $w8
 bindsym $mod+Shift+parenleft 	move container to workspace $w9
 
+
+workspace null output HDMI-1
+workspace web output HDMI-1
+workspace dev output HDMI-1
+workspace media output VGA-1
+workspace p2p output VGA-1
+workspace chat output VGA-1
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -179,4 +187,7 @@ client.urgent #ff4500 #ff4500 #c0c0c0
 assign [class="Iceweasel"] $w2
 #for_window [class="ioq3-urt" instance="ioq3-urt"] floating enable
 
-bindsym $mod+i exec iceweasel
+bindsym $mod+i			"exec iceweasel"
+bindsym $mod+t			"exec mpc toggle"
+bindsym $mod+Prior		"exec mpc volume +5"
+bindsym $mod+Next		"exec mpc volume -5"

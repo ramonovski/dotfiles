@@ -73,7 +73,7 @@ set shell=/usr/bin/zsh  " Default shell type
 set nobackup            " Disable backup
 set swapfile
 set updatecount=200
-set directory=$HOME/.vim/tmp
+set directory=/home/ramon/.vim/tmp
 set autochdir
 set ttyfast             " tell vim we're using a fast terminal for redraws
 set autoread            " Reload file if vim detects it changed elsewhere

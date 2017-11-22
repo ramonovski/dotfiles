@@ -23,13 +23,13 @@ URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
 ! -------
 ! Colours
 ! -------
-#include "/home/ramon/.xcolours/chido"
+#include "/home/ramon/.xcolours/marzo"
 
 ! -----------------
 ! Fake transparency
 ! -----------------
 URxvt.transparent: true
-URxvt.shading: 15
+URxvt.shading: 45
 
 ! ---------
 ! Open URLs

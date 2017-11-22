@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.ncmpcpp/config
 # author:   Ramon Solis www.ramonsolis.net
-# modified: Aug 2015
+# modified: Sept 2015
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=txt:
 # ------------------------------------------------------
 
@@ -46,8 +46,8 @@ color1 = "red"
 color2 = "black"
 empty_tag_color = "red"
 main_window_color = "cyan"
-main_window_highlight_color = "blue"
-active_column_color = "green"
+#main_window_highlight_color = "blue"
+#active_column_color = "green"
 active_window_border = "black"
 window_border_color = "red"
 statusbar_color = "yellow"
@@ -63,22 +63,23 @@ progressbar_look = "─╸⋅"
 # ----
 # Misc 
 # ----
+user_interface = classic
 playlist_separate_albums = "no"
 cyclic_scrolling = "yes"
-fancy_scrolling = "yes"
-display_screens_numbers_on_start = "no"
+#fancy_scrolling = "yes"
+#display_screens_numbers_on_start = "no"
 regular_expressions = "extended"
 external_editor = "/usr/bin/vim"
 ignore_leading_the = "no"
-# lyrics_database = "1" # 1 - lyricwiki.org | 2 - lyricsplugin.com
+#lyrics_database = "1" # 1 - lyricwiki.org | 2 - lyricsplugin.com
 clock_display_seconds = "yes"
 display_bitrate = "yes"
 state_line_color = "red"
 state_flags_color = "blue"
-state_window_color ="blue"
+#state_window_color ="blue"
 empty_tag_marker = "<empty>"
 jump_to_now_playing_song_at_start = "yes"
-ask_before_clearing_main_playlist = "no"
+ask_before_clearing_playlists = "no"
 enable_window_title = "yes"
 display_remaining_time = "no"
 display_volume_level = "yes"

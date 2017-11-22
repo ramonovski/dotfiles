@@ -1,0 +1,10 @@
+check_hash = yes
+
+throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 0
+directory = ~/Music/torrent
+session = ~/.rtorrent.session
+
+download_rate = 0
+upload_rate = 0
+
