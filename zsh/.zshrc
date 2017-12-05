@@ -1,14 +1,14 @@
 # ------------------------------------------------------
-# file:     $HOME/.zsh/zshrc
+# file:     $HOME/.config/zsh/.zshrc
 # author:   Ramon Solis www.ramonsolis.net
-# modified: Jul 2015
+# modified: Nov 2017
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
 # ----------------
 # Source zsh files 
 #-----------------
-ZDOTDIR="${HOME}/.zsh"
+ZDOTDIR="${HOME}/.config/zsh"
 [[ -r ${ZDOTDIR}/{aliases,functions,prompt} ]] 
     for i in ${ZDOTDIR}/{aliases,functions,prompt}; do
         . $i
@@ -24,7 +24,7 @@ export SAVEHIST=${HISTSIZE}
 # ----------
 # Completion
 # ----------
-zstyle :compinstall filename "${HOME}/.zshrc"
+zstyle :compinstall filename "${HOME}/.config/zsh/zshrc"
 autoload -Uz compinit
 compinit
 autoload -U incremental-complete-word
@@ -46,8 +46,8 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # -----
 # Paths
 # -----
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.scripts:$HOME/.composer/vendor/bin:$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools:$PATH"
-export CDPATH="$HOME/:/usr/share:$HOME/Apps:$HOME/Musica"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.config/scripts:$HOME/.composer/vendor/bin:$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools:$PATH"
+export CDPATH="$HOME/:/usr/share:$HOME/Apps"
 
 # ------
 # Colors
@@ -94,11 +94,12 @@ export EDITOR='/usr/bin/vim'                            \
        SIMPLE_BACKUP_SUFFIX="_`date +%F`"               \
        RXVT_SOCKET="$HOME/.urxvt/tmp"                   \
        WM='i3'                                          \
-       MPLAYER_HOME="$HOME/.config/mplayer"             \
-       GIMP2_DIRECTORY="$HOME/.gimp-2.8"                \
        JAVA_HOME="/usr/local/java/jdk1.8.0_60" 		    \
        JRE_HOME="$JAVA_HOME/jre"                        \
-       #XAUTHORITY="${HOME}/.config/xorg/.Xauthority"    \
+       VIMPERATOR_INIT=":source $HOME/.config/vimperator/vimperatorrc" \
+       VIMPERATOR_RUNTIME="$HOME/.config/vimperator"    \
+       VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'        \
+
 
 
 

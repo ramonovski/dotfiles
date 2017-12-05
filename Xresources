@@ -1,7 +1,7 @@
 ! ------------------------------------------------------
-! file:     /home/ramonovski/.Xdefaults
+! file:     /home/ramon/.Xresources
 ! author:   Ramon Solis www.ramonsolis.net
-! modified: Jul 2015
+! modified: Nov 2017
 ! vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! ------------------------------------------------------
         
@@ -29,7 +29,7 @@ URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
 ! Fake transparency
 ! -----------------
 URxvt.transparent: true
-URxvt.shading: 45
+URxvt.shading: 10
 
 ! ---------
 ! Open URLs

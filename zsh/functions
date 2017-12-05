@@ -1,7 +1,7 @@
 # ---------------------------------------------
 # file:     $HOME/.zsh/functions
 # author:   Ramon Solis - http://ramonsolis.net
-# modified: Dec 2015
+# modified: Nov 2017
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ---------------------------------------------
 
@@ -140,20 +140,17 @@ conf () {
             grub)       sudo $EDITOR /boot/grub/grub.conf ;;
             make)       sudo $EDITOR /etc/make.conf ;;
             fstab)      sudo $EDITOR /etc/fstab ;;
-            dzen)       $EDITOR $HOME/.scripts/dzenstat.sh;;
-            uzbl)       $EDITOR $HOME/.config/uzbl/config;;
-            mpd)        $EDITOR $HOME/.mpd/mpd.conf ;;
-            ncm)        $EDITOR $HOME/.ncmpcpp/config ;;
+            mpd)        $EDITOR $HOME/.config/mpd/mpd.conf ;;
+            ncm)        $EDITOR $HOME/.config/ncmpcpp/config ;;
             tmux)       $EDITOR $HOME/.tmux.conf ;;
-            xdef)       $EDITOR $HOME/.Xdefaults ;;
+            xres)       $EDITOR $HOME/.Xresources ;;
             alsa)       $EDITOR $HOME/.asoundrc ;;
             xin)        $EDITOR $HOME/.xinitrc ;;
-            vim)        $EDITOR $HOME/.vimrc ;;
-            zsh)        $EDITOR $HOME/.zshrc ;;
-            i3)         $EDITOR $HOME/.i3/config ;;
+            vim)        $EDITOR $HOME/.config/vim/vimrc ;;
+            zsh)        $EDITOR $HOME/.config/zsh/.zshrc ;;
+            i3)         $EDITOR $HOME/.config/i3/config ;;
             one)        $EDITOR $HOME/.one_liners ;;
             pazz)       $EDITOR $HOME/.pazz ;;
-            urt)        $EDITOR $HOME/.q3a/q3ut4/urt.cfg ;;
             func)       $EDITOR $ZDOTDIR/functions ;;
             alias)      $EDITOR $ZDOTDIR/aliases;;
             prompt)     $EDITOR $ZDOTDIR/prompt;;

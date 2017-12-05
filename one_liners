@@ -234,6 +234,7 @@ chattr -i file
 check MD5sum
 md5sum -c <<<"ef7ab26f9a3b2cbd35aa3e7e69aad86c *path/to/file/test_binary"
 
+
 tar with excludes
 tar --exclude='verican/FMS' --exclude='verican/backup' -zcvf ~/verican6.tar.gz verican 
 

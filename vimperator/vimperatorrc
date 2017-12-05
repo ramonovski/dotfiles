@@ -1,0 +1,14 @@
+colorscheme darkness
+
+set hintchars=arstdhneoi
+set gui=nonavigation
+
+map h gT
+map l gt
+
+
+map j <Down>
+map k <Up>
+
+cmap <C-i> <Tab>
+cmap <C-p> <S-Tab>

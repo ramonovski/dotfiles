@@ -1,17 +1,17 @@
 # ------------------------------------------------------
 # file:     $HOME/.zsh/aliases
-# author:   Ramon Solis - http://cyb3rpunk.wordpress.com
-# modified: Dec 2012
+# author:   Ramon Solis 
+# modified: Nov 2017
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
 # --------
 # Aptitude
 # --------
-alias dinstall='sudo aptitude install'
-alias dremove='sudo aptitude remove'
-alias dupdate='sudo aptitude update'
-alias dsearch='sudo aptitude search'
+alias dinstall='sudo apt-get install'
+alias dremove='sudo apt-get remove'
+alias dupdate='sudo apt-get update'
+alias dsearch='sudo apt-cache search'
 
 # -----------
 # Mount stuff 
@@ -108,4 +108,4 @@ alias ipe='curl icanhazip.com'
 alias p='ping gentoo.org'
 
 alias cis='sudo mount -t cifs -o username=valleychronicle,password=1234 //192.168.15.1/theserver /mnt/cisco'
-alias cloud='sudo mount -t cifs -o username=jose,password=0112358 //192.168.10.129/jose /mnt/cisco'
+alias cloud='sudo mount -t cifs -o username=jose,password=0112358 //192.168.10.120/jose /mnt/cisco'

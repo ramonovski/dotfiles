@@ -1,13 +1,18 @@
 " ------------------------------------------------------
-" file:     $HOME/.vimrc
+" file:     $HOME/.config/vim/vimrc
 " author:   Ramon Solis  
-" modified: June 2013
+" modified: Nov 2017
 " vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=vim:
 " ------------------------------------------------------
 
 set t_Co=256            " Enable 256 colors
 "colorscheme xoria256    " Set the colorscheme
 set nocompatible 	    " VIM
+
+set viminfo+=n$HOME/.config/vim/viminfo
+set backupdir=$HOME/.config/vim/backup
+set runtimepath=$HOME/.config/vim,$VIMRUNTIME
+let $MYVIMRC="$HOME/.config/vim/vimrc"
 
 " -----------
 " colorscheme
@@ -64,7 +69,7 @@ set wrapscan            " searches wrap back to the top of file
 set fileformats=unix	" 
 set ruler
 set wrap                " wrap long lines to fit terminal width
-set backupdir=~/.vim/backup  " 
+set backupdir=~/.config/vim/backup  " 
 set updatecount=200
 set autochdir
 set ttyfast             " tell vim we're using a fast terminal for redraws
@@ -73,7 +78,6 @@ set shell=/usr/bin/zsh  " Default shell type
 set nobackup            " Disable backup
 set swapfile
 set updatecount=200
-set directory=/home/ramon/.vim/tmp
 set autochdir
 set ttyfast             " tell vim we're using a fast terminal for redraws
 set autoread            " Reload file if vim detects it changed elsewhere
@@ -86,8 +90,8 @@ set nostartofline       " remember the cursor position
 set lazyredraw
 
 " Remember cursor last position
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
 "set spell
 "set colorcolumn=120
 

@@ -1,7 +1,7 @@
 # ------------------------------------------------------
 # file:     $HOME/.xinitrc
 # author:   Ramon Solis www.ramonsolis.net
-# modified: Jul 2015
+# modified: Nov 2017
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
@@ -21,6 +21,8 @@ xset s 240
 # Disable beep
 xset -b
 
+# Xresources
+xrdb -load $HOME/.Xresources
 
 # urxvt daemon
 /usr/bin/urxvtd -q -o -f &
@@ -35,7 +37,7 @@ xrandr --output HDMI-1 --mode 1920x1080 --left-of VGA-1 --mode 1920x1080
 /usr/bin/xmodmap $HOME/.xmodmaprc
 
 # MPD
-sh $HOME/.scripts/startmpd.sh &
+sh $HOME/.config/scripts/startmpd.sh &
 
 # wm
 exec /usr/bin/i3 

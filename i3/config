@@ -159,7 +159,7 @@ bindsym $mod+r mode "resize"
 bar 
 {
 	#status_command i3status -c ~/.i3/i3status.conf
-	status_command ~/.i3/i3bar.sh
+	status_command ~/.config/i3/i3bar.sh
 	font -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
 
 	colors 
@@ -184,10 +184,11 @@ client.unfocused #292929 #292929 #595959
 client.urgent #ff4500 #ff4500 #c0c0c0
 #client.background #000000
 
-assign [class="Iceweasel"] $w2
+assign [class="Firefox"] $w2
+assign [class="Chromium"] $w2
 #for_window [class="ioq3-urt" instance="ioq3-urt"] floating enable
 
 bindsym $mod+i			"exec iceweasel"
 bindsym $mod+t			"exec mpc toggle"
-bindsym $mod+Prior		"exec mpc volume +5"
-bindsym $mod+Next		"exec mpc volume -5"
+bindsym $mod+Prior		"exec mpc volume +2"
+bindsym $mod+Next		"exec mpc volume -2"
