@@ -1,31 +1,22 @@
 # ------------------------------------------------------
 # file:     $HOME/.zsh/aliases
 # author:   Ramon Solis 
-# modified: Nov 2017
+# modified: September 2018
 # vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
 # ------------------------------------------------------
 
 # --------
 # Aptitude
 # --------
-alias dinstall='sudo apt-get install'
-alias dremove='sudo apt-get remove'
-alias dupdate='sudo apt-get update'
-alias dsearch='sudo apt-cache search'
+alias dinstall='sudo apt install'
+alias dremove='sudo apt remove'
+alias dupdate='sudo apt update'
+alias dsearch='sudo apt search'
 
 # -----------
 # Mount stuff 
 # -----------
-alias windos='sudo ntfs-3g /dev/sda4 /mnt/windos'
-alias ehd="sudo mount /mnt/ehd && cd /mnt/ehd"
 alias cdrive='sudo mount /dev/sr0 /mnt/cdrom/'
-alias sansa='mount /mnt/sansa/'
-alias flashd='mount /mnt/flashd'
-alias um1='sudo umount /mnt/sansa'
-alias um2='sudo umount /mnt/ehd'
-alias um3='sudo umount /mnt/windos'
-alias um4='sudo umount /mnt/camera'
-alias um5='sudo umount /mnt/flashd'
 
 # -----
 # Music
@@ -41,7 +32,7 @@ alias sjack='qjackctl -start'
 alias -s {html,shtml,php,com,net,org,gov}=$BROWSER
 alias -s {txt,py,rb,log}=$EDITOR
 alias -s {jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}='sxiv'
-alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv,webm}='mplayer'
+alias -s {mpg,mpeg,avi,ogm,ogv,wmv,m4v,mp4,mov,f4v,mkv,webm}='mpv'
 alias -s {odt,doc,docx,ppt,pptx,xls,xlsx,rtf}='libreoffice'
 alias -s {rar,zip,7z,tar,gz,bz2,tgz}='ext'
 alias -s torrent='rtorrent'
@@ -50,9 +41,8 @@ alias -s pdf='zathura'
 # ----------------------------
 # ls, cp and that classic shit
 # ----------------------------
-alias ls='ls++'
-alias lsa='ls -a --group-directories-first'
-alias lsl='ls -lhF --group-directories-first'
+alias ls='ls -lh --group-directories-first --color'
+alias lsa='ls -a'
 alias cp='cp -vi'
 alias cpd='cp -r'
 alias mv='mv -v'
@@ -75,7 +65,6 @@ alias sv='sudo vim'
 # ----
 # Misc
 # ----
-alias go='startx'
 alias ka='killall'
 alias :q='exit'
 alias apaga='xset dpms force off'
@@ -104,8 +93,10 @@ alias -g H='| --help '
 # ---
 # Net
 # ---
-alias ipe='curl icanhazip.com'
+alias ipe='curl http://checkip.amazonaws.com'
 alias p='ping gentoo.org'
 
 alias cis='sudo mount -t cifs -o username=valleychronicle,password=1234 //192.168.15.1/theserver /mnt/cisco'
-alias cloud='sudo mount -t cifs -o username=jose,password=0112358 //192.168.10.120/jose /mnt/cisco'
+alias windos='sudo ntfs-3g /dev/sda4 /mnt/windos'
+#alias cloud='sudo mount -t cifs -o username=jose,password=0112358 //192.168.1.170/jose /mnt/cisco'
+alias cloud='sudo mount -t cifs -o username=pip,password=pip //192.168.1.170/pip /mnt/cisco'

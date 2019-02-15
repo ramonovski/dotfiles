@@ -9,7 +9,8 @@ set t_Co=256            " Enable 256 colors
 "colorscheme xoria256    " Set the colorscheme
 set nocompatible 	    " VIM
 
-set viminfo+=n$HOME/.config/vim/viminfo
+"set viminfo+=n$HOME/.config/vim/viminfo
+set viminfo='10,\"100,:20,%,n~/.viminfo
 set backupdir=$HOME/.config/vim/backup
 set runtimepath=$HOME/.config/vim,$VIMRUNTIME
 let $MYVIMRC="$HOME/.config/vim/vimrc"
@@ -86,12 +87,12 @@ set history=666         " Lines of command history
 set undolevels=666      " Set undo level
 set title               " Set window title with the vim file
 set ofu=syntaxcomplete#Complete
-set nostartofline       " remember the cursor position
+set nostartofline       " Same column
 set lazyredraw
 
 " Remember cursor last position
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+" au BufWinLeave ?* mkview
+" au BufWinEnter ?* silent loadview
 "set spell
 "set colorcolumn=120
 
@@ -164,3 +165,17 @@ let g:netrw_liststyle=3
 "
 " Change directory to the current buffer when opening files.
 set autochdir
+
+" Save cursor position!
+function! ResCur()
+    if line("'\"") <= line("$")
+        normal! g`"
+        return 1
+    endif
+endfunction
+
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+augroup END
+

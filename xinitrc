@@ -16,7 +16,7 @@ setxkbmap us -variant colemak
 #xset +fp ~/.fonts
 
 # Screensaver time
-xset s 240
+xset s 1280
 
 # Disable beep
 xset -b
@@ -31,7 +31,8 @@ xrdb -load $HOME/.Xresources
 sh $HOME/.fehbg &
 
 # Displays
-xrandr --output HDMI-1 --mode 1920x1080 --left-of VGA-1 --mode 1920x1080
+xrandr --output VGA-1 --mode 1920x1080 --right-of HDMI-1 --mode 1920x1080 --rotate right
+#xrandr --output HDMI-1 --mode 1920x1080 --left-of VGA-1 --mode 1920x1080
 
 # Xmodmap
 /usr/bin/xmodmap $HOME/.xmodmaprc

@@ -8,7 +8,8 @@
 # ----------------
 # Source zsh files 
 #-----------------
-ZDOTDIR="${HOME}/.config/zsh"
+#ZDOTDIR="${HOME}/.config/zsh"
+ZDOTDIR="${HOME}/.zsh"
 [[ -r ${ZDOTDIR}/{aliases,functions,prompt} ]] 
     for i in ${ZDOTDIR}/{aliases,functions,prompt}; do
         . $i
@@ -24,7 +25,8 @@ export SAVEHIST=${HISTSIZE}
 # ----------
 # Completion
 # ----------
-zstyle :compinstall filename "${HOME}/.config/zsh/zshrc"
+#zstyle :compinstall filename "${HOME}/.config/zsh/zshrc"
+zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit
 compinit
 autoload -U incremental-complete-word
@@ -46,7 +48,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # -----
 # Paths
 # -----
-export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.config/scripts:$HOME/.composer/vendor/bin:$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools:$PATH"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:$HOME/.config/scripts:$HOME/.composer/vendor/bin:$HOME/Android/Sdk/platform-tools:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/emulator:$PATH"
 export CDPATH="$HOME/:/usr/share:$HOME/Apps"
 
 # ------

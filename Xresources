@@ -14,35 +14,36 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hinstyle:   hintslight
 
-# ----
-# Font
-# ----
+! ----
+! Font
+! ----
 URxvt*font:     -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-1
 URxvt*boldFont: -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso8859-1
 
 ! -------
 ! Colours
 ! -------
-#include "/home/ramon/.xcolours/marzo"
+#include "/home/ramon/.xcolours/victorianish"
 
 ! -----------------
 ! Fake transparency
 ! -----------------
 URxvt.transparent: true
-URxvt.shading: 10
+URxvt.shading: 15
+
 
 ! ---------
 ! Open URLs
 ! ---------
 URxvt.underlineURLs: true
-URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
-URxvt.keysym.M-y: perl:mark-yank-urls:activate_mark_url_mode
+!URxvt.keysym.M-u: perl:mark-yank-urls:activate_mark_mode
+!URxvt.keysym.M-y: perl:mark-yank-urls:activate_mark_url_mode
 !URxvt.reverseVideo: true
-URxvt.perl-lib: /home/ramon/.urxvt/
-URxvt.perl-ext: selection
-URxvt.perl-ext: mark-yank-urls
-URxvt.colorUL:       #86a2be
-URxvt*urlLauncher:   /usr/bin/firefox
+!URxvt.perl-lib: /home/ramon/.urxvt/
+!URxvt.perl-ext: selection
+!URxvt.perl-ext: mark-yank-urls
+!URxvt.colorUL:       #86a2be
+!URxvt*urlLauncher:   /usr/bin/firefox
 
 ! ------------
 ! Misc options 
@@ -59,3 +60,4 @@ URxvt*scrollBar:         false
 URxvt*saveLines:         666
 URxvt.buffered:          true
 URxvt.iconFile:          /usr/share/pixmaps/urxvt.xmp
+

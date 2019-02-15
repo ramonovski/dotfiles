@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-scale' '/home/ramon/Images/star.jpg' 
+feh  --bg-scale '/home/ramon/Images/space.jpg' 
